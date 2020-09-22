@@ -1,0 +1,72 @@
+* {
+    box-sizing: border-box;
+}
+
+i {
+    padding: 0.5rem;
+}
+
+.jumbotron {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    text-align: center;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    margin-bottom: 0.5rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    color: white;
+    background: #007bff;
+}
+
+.container {
+    max-width: 100%;
+}
+
+.bg-primary, .input-group {
+    margin-bottom: 10px;
+}
+
+.citiesSearch {
+    width: 100%;
+    display: inline-block;
+}
+
+.input-group {
+    margin-top: 0.5rem;
+    margin-bottom: 1.5rem;
+
+}
+
+.btn-light {
+    border: solid lightgray 0.1rem;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    text-align: left;
+    background-color: transparent;
+}
+
+.uvPadding {
+    padding: 0.5rem 1.0rem;
+    border-radius: 0.25rem;
+}
+
+.card-body {
+    padding: 0.75rem;
+    padding-bottom: 0;
+    color: white;
+    background-color: #007bff;
+}
+
+#presentWeather {
+    border: solid 1px rgba(0,0,0,.125);
+    border-radius: 0.3rem;
+    margin: 15px 0 15px 0;
+    padding: 15px;
+}
+
+#previousSearch {
+    margin-bottom: 15px;
+    max-height: 408px;
+    overflow: auto;
+}
