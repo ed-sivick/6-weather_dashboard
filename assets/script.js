@@ -68,7 +68,6 @@ $(document).ready(function () {
                 console.log("City = " + h2City);
                 console.log("present Date = " + h2Date);
                 console.log("Weather h2Icon = " + h2Icon);
-
                 console.log("Temp = " + pTemp);
                 console.log("Humidity = " + pHum);
                 console.log("Wind Speed = " + pWind);
@@ -79,15 +78,12 @@ $(document).ready(function () {
                 // presDiv.append("<p>Temperature: " + pTemp + "</p>");
                 // presDiv.append("<p>Humidity: " + pHum + "</p>");
                 // presDiv.append("<p>Wind Speed: " + pWind + "</p>");
-
                 cityBtn(response.name);
             })
     };
-
     // Retrieve UV index info for city displaying present weather 
     function presentUV(coordinates) {
         var queryURL2 = "https://api.openweathermap.org/data/2.5/uvi?lat=" + coordinates.lat + "&lon=" + coordinates.lon + "&APPID=" + apiKey;
-
         $.ajax(queryURL2)
             .then(function (response) {
                 var UvIndex = response.value;
@@ -116,7 +112,6 @@ $(document).ready(function () {
     // Retrieve future weather forecast for city that is searched
     function futureWeather(city) {
         var queryURL3 = "https://api.openweathermap.org/data/2.5/forecast?q=" + city + "&units=imperial&APPID=d4eddad13454bd157378f5f6d7ef617d";
-
         $.ajax(queryURL3)
             .then(function (response) {
                 var forecast = response.list;
@@ -146,7 +141,6 @@ $(document).ready(function () {
                 })
             })
     };
-
     function cityBtn(city) {
         // Check if the button exists in history trimming whitespace, and if it does, exit the function
         var citySearch = city.trim();
@@ -159,15 +153,11 @@ $(document).ready(function () {
             cityArray.push(city);
             localStorage.setItem("cityKey", JSON.stringify(cityArray));
         }
-
         $("#previousSearch").prepend(`<button class="btn btn-light" value='${city}'>${city}</button>`);
     }
-
     function recordCitySearch(array) {
         $.each(array, function (i) {
             cityBtn(array[i]);
         })
     }
-
-
 });
