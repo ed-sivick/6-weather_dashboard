@@ -19,7 +19,7 @@ The JavaScript code used primarily 5 functions. The app is initiated by retrievi
 
 ___
 ## Summary
- Weather information is arguably one of the more important daily news events for many people across the world.  There are countless methods one can utilize to view the weather, and the introduction of electronic devices has made it easier to receive the data.  This assignment was very challenging to me, and I found myself searching various resources to complete it on time.  In particular, I tried several ways to display the weather data such as icon images and the UV index color using different JSON syntax.  In hindsight, I would have pseudo coded this more, and planned on creating the five Bootstrap cards in the index.html code instead of dynamically creating them.      
+ Weather information is arguably one of the more important daily news events for many people across the world.  There are countless methods one can utilize to view the weather, and the introduction of electronic devices has made it easier to receive the data.  This assignment was very challenging to me, and I found myself searching various resources to complete it on time.  In particular, I tried several ways to display the weather data such as icon images and the UV index color using different JSON syntax, (example: ${property.value} or ${variable}) .  In hindsight, I would have pseudo coded this more, and planned on creating the five Bootstrap cards in the index.html code instead of dynamically creating them.      
 
 
 ## Application Links and Images  
