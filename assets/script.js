@@ -87,7 +87,7 @@ $(document).ready(function () {
         var queryURL2 = "https://api.openweathermap.org/data/2.5/uvi?lat=" + coordinates.lat + "&lon=" + coordinates.lon + "&APPID=" + apiKey;
         $.ajax(queryURL2)
             .then(function (response) {
-                var UvIndex = (response.value).toFixed(1);
+                var UvIndex = (response.value).toFixed(2);
                 var uvColor = "green";
 
                 console.log("Present UV data for: " + city);
