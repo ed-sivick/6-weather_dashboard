@@ -93,6 +93,9 @@ $(document).ready(function () {
                 var UvIndex = response.value;
                 var uvColor = "green";
 
+                console.log("Present UV data for: " + city);
+                console.log(response);
+
                 //Change UV background based on Index value
                 if (UvIndex >= 11) {
                     uvColor = "violet";
@@ -116,14 +119,18 @@ $(document).ready(function () {
 
         $.ajax(queryURL3)
             .then(function (response) {
-                var outlook = response.list;
+                var forecast = response.list;
+
+                console.log("Future forecast data for: " + city);
+                console.log(response);
+                
                 futureForecast.empty();
-                $.each(outlook, function (i) {
-                    if (!outlook[i].dt_txt.includes("12:00:00")) {
+                $.each(forecast, function (i) {
+                    if (!forecast[i].dt_txt.includes("12:00:00")) {
                         return;
                     }
-                    var forecastDate = new Date(outlook[i].dt * 1000);
-                    var weatherIcon = `https://openweathermap.org/img/w/${outlook[i].weather[0].icon}.png`;
+                    var forecastDate = new Date(forecast[i].dt * 1000);
+                    var weatherIcon = `https://openweathermap.org/img/w/${forecast[i].weather[0].icon}.png`;
                     // Append future forecast data to create Bootstrap cards 
                     futureForecast.append(`
                         <div class="col-md">
@@ -131,8 +138,8 @@ $(document).ready(function () {
                                 <div class="card-body">
                                     <h4>${forecastDate.getMonth() + 1}/${forecastDate.getDate()}/${forecastDate.getFullYear()}</h4>
                                     <img src=${weatherIcon} alt="Icon">
-                                    <p>Temp: ${(outlook[i].main.temp).toFixed(2) + " &#176F"}</p>
-                                    <p>Humidity: ${outlook[i].main.humidity}%</p>
+                                    <p>Temp: ${(forecast[i].main.temp).toFixed(2) + " &#176F"}</p>
+                                    <p>Humidity: ${forecast[i].main.humidity}%</p>
                                 </div>
                             </div>
                         </div>`)
