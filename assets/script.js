@@ -49,6 +49,7 @@ $(document).ready(function () {
                 console.log(presTime)
                 var weatherIcon = "https://openweathermap.org/img/w/" + (response.weather[0].icon) + ".png";
                 console.log(response);
+                // Current weather conditions for searched city in presDiv (div id="presentWeather")
                 presDiv.html(`
                     <h2>${response.name}, ${response.sys.country} (${presTime.getMonth() + 1}/${presTime.getDate()}/${presTime.getFullYear()})<img src=${weatherIcon} height="70px"></h2>
                     <p>Temperature: ${parseInt(response.main.temp).toFixed(1) + " &#176F"}</p>
@@ -74,7 +75,7 @@ $(document).ready(function () {
                 console.log("UV Index latitude = " + pUvLat);
                 console.log("UV Index longitude = " + pUvLon);
                 // CHECK OF DUPLICATED VALUES BELOW FOR PRESENT WEATHER CONDITIONS
-                // presDiv.html("<h2>" + h2City + " " + h2Date + " " + h2Icon + "</h2><br>");
+                // presDiv.html("<h2>" + h2City + " " + h2Date + " " + h2IconUrl + "</h2><br>");
                 // presDiv.append("<p>Temperature: " + pTemp + "</p>");
                 // presDiv.append("<p>Humidity: " + pHum + "</p>");
                 // presDiv.append("<p>Wind Speed: " + pWind + "</p>");
