@@ -29,4 +29,4 @@ index.html code: (https://github.com/ed-sivick/6-weather_dashboard/blob/master/i
 JavaScript.js code: (https://github.com/ed-sivick/6-weather_dashboard/blob/master/assets/script.js)  
 style.css code: (https://github.com/ed-sivick/6-weather_dashboard/blob/master/assets/style.css)
 <p align="left">
-  <img src="assets/images/weather-image1.png" height="450" margin-bottom: 10px; title="image of daily schedule showing future color coded timeblocks with no tasks added" alt="image of daily schedule showing future color coded timeblocks with no tasks added">
+  <img src="assets/images/weather-image1.png" height="450" margin-bottom: 10px; title="image of weather dashboard showing current and five day forecast for weather in Miami, Florida" alt="image of weather dashboard showing current and five day forecast for weather in Miami, Florida">
